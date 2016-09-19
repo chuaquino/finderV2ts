@@ -1,0 +1,34 @@
+<ion-content padding>
+  <div class="mainBackDiv" >
+    <div class="pin_icon"></div>
+    <div id="map_ph">
+
+    <!-- <div class="getgeoloc">
+      <ion-row>
+        <ion-col width-80 class="loc_input">
+          <ion-input type="text" id='geolocation' [(ngModel)]="geolocation"(input)="autocomplete($event)" placeholder="{{'Enter a location' }}" class="geo_inpt" ></ion-input>
+        </ion-col>
+
+        <ion-col width-20 class="loc_btn">
+          <button id="lndBtnLoc" block outline (click)="showlatlong(mainp)">
+            <ion-icon name="locate"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+
+      <div id="lndLoaderLoc" class="loader"></div>
+    </div> -->
+      <div class="getgeoloc">
+        <div class="geoloc_inputlp">
+          <ion-input type="text" id='geolocation' [(ngModel)]="geolocation"(input)="autocomplete($event)" placeholder="{{'Enter a location' }}" class="geo_inpt" ></ion-input>
+        </div>
+        <div class="geoloc_btnlp">
+          <button id="lndBtnLoc" block clear (click)="showlatlong(mainp)">
+            <ion-icon name="locate"></ion-icon>
+          </button>
+          <div id="lndLoaderLoc" class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

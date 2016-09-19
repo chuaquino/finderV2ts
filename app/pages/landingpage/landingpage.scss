@@ -1,0 +1,205 @@
+.landingpage {
+
+}
+// location input and button css
+  // ion-col.loc_btn{
+  // padding:0px;
+  // }
+  // ion-col.loc_input{
+  // padding:0px;
+  // }
+  // button#lndBtnLoc{
+  //   border-radius: 0px;
+  //   margin: .5% 0%;
+  // }
+  //
+
+// end- location input and button css
+.mainBackDiv{
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-image: $bg-pattern;
+}
+
+
+// div.ph_map{
+// 	position:absolute;
+// 	z-index:1;
+// 	// background-image: $ph_map;
+// 	// width: 95%;
+//   // height: 90vh;
+//   // background-size: 93%;
+//   // background-repeat: no-repeat;
+// }
+div.pin_icon {
+		z-index:10;
+    position: absolute;
+    height: 60%;
+		width: 100%;
+		display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+
+	 padding: 0% 10%;
+
+
+  background-image: $map_pin;
+ 	background-repeat: no-repeat;
+ 	background-repeat:no-repeat;
+ 	background-position: center center;
+ 	-webkit-background-size: 40%;
+ 	-moz-background-size: 40%;
+ 	-o-background-size: 40%;
+ 	background-size: 40%;
+}
+
+div#map_ph {
+	z-index: 100;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  background-image: $ph_map;
+	background-repeat: no-repeat;
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.geo_inpt{
+	padding-left: 10px;
+	background:#3493FF;
+	color:#fff !important;
+}
+div.getgeoloc {
+	z-index:100;
+    display: inline-flex;
+    width: 100%;
+		// margin-top: 80%;
+		padding: 0% 10%;
+}
+div.geoloc_inputlp{
+	width:80%;
+  height:40px;
+	padding-top:0px;
+	border: 1px solid #3493FF;
+  background: #3493FF;
+}
+
+div.geoloc_btnlp{
+	width:20%;
+  height:40px;
+	padding-top:0px;
+  border: 1px solid #9FCCFF;
+  background: #fff;
+
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+div.geoloc_btnlp button {
+    height:100%;
+		margin: 0px;
+}
+
+ion-input#geolocation input.text-input {
+    margin: 10px 5px !important;
+}
+ion-toolbar.geoloc_toolbar.toolbar {
+    padding: 10%;
+}
+
+
+/*Location indicator */
+.loader {
+	display: none;
+  color: #3493FF;
+  font-size: 15px;
+  // text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  // margin: 0 auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
