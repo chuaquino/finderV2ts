@@ -5,8 +5,11 @@ import {LandingPage} from './pages/landingpage/landingpage';
 
 import {ConnectivityService} from './providers/connectivity-service/connectivity-service';
 
+import {GeolocationService} from './providers/geolocation-service/geolocation-service';
+
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+  template: '<ion-nav [root]="rootPage"></ion-nav>',
+  providers: [GeolocationService]
 })
 export class MyApp {
 

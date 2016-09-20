@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?awjbyu');
+    src:    url('../fonts/icomoon.eot?awjbyu#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?awjbyu') format('truetype'),
+        url('../fonts/icomoon.woff?awjbyu') format('woff'),
+        url('../fonts/icomoon.svg?awjbyu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icoMoon-"], [class*=" icoMoon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icoMoon{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icoMoon-jeep2:before {
+    content: "\1f320";
+}
+
+// .icoMoon-marker:before {
+//     content: "\e904";
+//     // font-size: 5em;
+//     font-size: 16vw;
+// }
+.icoMoon-more:before {
+    // content: "\e90b";
+    font-size: 16vw;
+}
+
+.icoMoon-review:before {
+    content: "\e90a";
+    font-size: 5em;
+}
+
+// .icoMoon-website:before {
+//     content: "\e909";
+//     font-size: 5em;
+// }
+ion-col.main-col{
+    text-align: center;
+}
+// custom icon css
+ion-icon.ion-md-jeep,ion-icon.ion-md-resto,ion-icon.ion-md-hotel,ion-icon.ion-md-mall,ion-icon.ion-md-supermarket,ion-icon.ion-md-salon,ion-icon.ion-md-police,ion-icon.ion-md-health{
+  font-size:6em;
+}
+
+.ion-md-jeep:before{
+  content: "\e902";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-md-resto:before{
+  content: "\e906";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-md-hotel:before{
+  content: "\e901";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-md-mall:before{
+  content: "\e903";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ion-md-supermarket:before{
+  content: "\e908";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ion-md-salon:before{
+  content: "\e907";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ion-md-police:before{
+  content: "\e905";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ion-md-health:before{
+  content: "\e900";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-md-marker:before{
+  content: "\e904";
+
+  color: #B7B7B7;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-md-website:before{
+  content: "\e909";
+
+  color: #B7B7B7;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button.main_btn.disable-hover.button.button-clear.button-fab.button-clear-fab-top.button-icon-only {
+    position: inherit;
+    overflow: hidden;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    // border-radius: 50%;
+    font-size: 3vw;
+    // line-height: 56px;
+    vertical-align: middle;
+    background-clip: padding-box;
+    margin: 5% 0%;
+    box-shadow: none;
+}
+// ion-icon.more{
+//   font-size: 4em;
+// }
+button.main_btn.disable-hover.button.button-clear.button-fab.button-clear-fab-top.button-icon-only ion-button-effect{
+  display: none !important;
+  background: rgba(255, 255, 255, 0) !important;
+}
+ion-button-effect{
+  display:none !important;
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+// custom icon css end
+
+.ion-md-jeepTab:before{
+  content: "\1f320";
+
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//icomoon custom font icons
+
+#mainBackDivMP{
+  height: 100%;
+  background-image: $bg-pattern;
+}
+
+.btn-menu-label {
+    font-size: 12pt;
+    color: #636363;
+    white-space: pre-wrap;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 1%;
+}
+
+ion-row.enter {
+    border: .5px solid #D8D8D8;
+    background: #fff;
+    height: 45px;
+}
+
+p {
+  margin: 20px 0;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.upperDiv{
+  height:15%;
+  padding: 0%
+}
+.lowerDiv{
+  height:100%;
+}
+
+div.geoloc_input{
+	width:80%;
+  height:40px;
+	padding-top:0px;
+  border: 1px solid #9FCCFF;
+  background: #fff;
+}
+
+
+div.geoloc_btn button {
+    height:100%;
+		margin: 0px;
+}
+
+div.geoloc_btn{
+	width:20%;
+  height:40px;
+	padding-top:0px;
+  border: 1px solid #9FCCFF;
+  background: #fff;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+ion-input#geolocation input.text-input {
+    margin: 10px 5px !important;
+}
+ion-toolbar.geoloc_toolbar.toolbar {
+    padding: 3%;
+    min-height: 7rem;
+}
+ion-input#geolocation input.text-input::-webkit-input-placeholder {
+    color: #fff;
+}
