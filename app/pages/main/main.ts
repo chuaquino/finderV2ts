@@ -3,7 +3,7 @@ import {Storage, SqlStorage, NavParams, NavController,AlertController} from 'ion
 // import {TabsPage} from '../jeepney/tabs/tabs';
 //
 //
-// import {UniPage} from '../uni-page/uni-page';
+import {UniPage} from '../uni-page/uni-page';
 // // Import menu pages until here
 // import {DataService} from '../../services/data';
 // // import {Geolocation} from 'ionic-native';
@@ -30,16 +30,12 @@ export class MainPage{
   // }
 
   private geolocation2: any = "";
+  private details: any;
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private alertCtrl: AlertController, private geolocationService: GeolocationService) {
-
-  }
-  ionViewWillEnter(){
-    var me = this;
-    var details = this.navParams.get('geoloc');
-    console.log(details);
-
-    me.geolocation2 = details.locationName;
+  constructor(private navCtrl: NavController, private navParams: NavParams, private alertCtrl: AlertController, private geolocationService: GeolocationService, private connectivity: ConnectivityService) {
+    this.details = this.navParams.get('geoloc');
+    console.log(this.details);
+    this.geolocation2 = this.details.locationName;
   }
 
   // ionViewDidEnter(){
@@ -51,8 +47,8 @@ export class MainPage{
   // }
   //
   autocomplete(searchbar){
-    console.log(searchbar.value);
-    this.geolocationService.autoComplete('mainpage');
+    console.log(searchbar);
+    this.geolocationService.autoComplete('landingpage');
   }
   //
   showlatlong2(event) {
@@ -121,35 +117,35 @@ export class MainPage{
     document.getElementById('mainLoaderLoc').style.display = "none";
   }
   //
-  // nextPage(ctr){
-  //   console.log('nextPage(ctr)');
-  //   var ctr;
-  //   var me = this;
-  //   var latlng = me.geolocationService.getLatlng();
-  //   console.log(me.details.locationName);
-  //   console.log(latlng.locationName);
-  //   //push another page onto the history stack
-  //   //causing the nav controller to animate the new page in
-  //
-  //   var geoloc;
-  //
-  //   if (latlng.locationName!=undefined) {
-  //     console.log('aaaaaaaa');
-  //     geoloc = latlng;
-  //
-  //   }
-  //   else{
-  //     console.log('bbbbbb');
-  //     geoloc = me.details;
-  //     console.log(geoloc);
-  //   }
-  //
-  //   if(me.connectivity.isOnline()){
-  //     this.nav.push( UniPage, {geoloc: geoloc, page:ctr} );
-  //   }
-  //   else {
-  //       me.geolocationService.netErrMsg();
-  //   }
-  // }
+  nextPage(ctr){
+    console.log('nextPage(ctr)');
+    var ctr;
+    var me = this;
+    var latlng = me.geolocationService.getLatlng();
+    console.log(me.details.locationName);
+    console.log(latlng.locationName);
+    //push another page onto the history stack
+    //causing the nav controller to animate the new page in
+
+    var geoloc;
+
+    if (latlng.locationName!=undefined) {
+      console.log('aaaaaaaa');
+      geoloc = latlng;
+
+    }
+    else{
+      console.log('bbbbbb');
+      geoloc = me.details;
+      console.log(geoloc);
+    }
+
+    if(me.connectivity.isOnline()){
+      this.navCtrl.push( UniPage, {geoloc: geoloc, page:ctr} );
+    }
+    else {
+        me.geolocationService.netErrMsg();
+    }
+  }
 
 }

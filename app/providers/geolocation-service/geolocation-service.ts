@@ -136,6 +136,7 @@ export class GeolocationService {
             console.log(a);
             a++;
             console.log(result);
+            console.log("1aa");
             pagination.nextPage();
             for (var m = 0; m < result.length; m++) {
               result[m]['distance']= (google.maps.geometry.spherical.computeDistanceBetween(p1, result[m].geometry.location) / 1000).toFixed(2)+" km";
@@ -159,10 +160,11 @@ export class GeolocationService {
 
     return new Promise(function(resolve, reject) {
       // Only `delay` is able to resolve or reject the promise
-      // setTimeout(function() {
+      setTimeout(function() {
         console.log(items);
+        console.log("2aa");
         resolve(items); // After 3 seconds, resolve the promise with value 42
-      // }, 0);
+      }, 2500);
     });
 
   }

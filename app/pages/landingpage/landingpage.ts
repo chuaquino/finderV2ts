@@ -22,13 +22,16 @@ export class LandingPage {
   }
 
   ionViewWillEnter(){
-    console.log("ionViewWillEnter(")
+    console.log("ionViewWillEnter(");
     this.geolocationService.loadGeolocation();
   }
 
   autocomplete(searchbar){
     console.log(searchbar);
     this.geolocationService.autoComplete('landingpage');
+    if(this.geolocation!==""){
+      console.log("not null");
+    }
   }
 
   showlatlong(event) {
