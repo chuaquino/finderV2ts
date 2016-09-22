@@ -20,7 +20,7 @@
     </div> -->
       <div class="getgeoloc">
         <div class="geoloc_inputlp">
-          <ion-input type="text" id='geolocation' [(ngModel)]="geolocation" (input)="autocomplete($event)" placeholder="{{'Enter a location' }}" class="geo_inpt"></ion-input>
+          <ion-input type="text" id='geolocation' [(ngModel)]="geolocation" (input)="autocomplete($event)" placeholder="{{'Enter a location' | translate }}" class="geo_inpt"></ion-input>
         </div>
         <div class="geoloc_btnlp">
           <button id="lndBtnLoc" block clear (click)="showlatlong(mainp)">

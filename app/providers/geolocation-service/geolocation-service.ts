@@ -174,16 +174,6 @@ export class GeolocationService {
 
     var geo: any;
 
-
-    if (document.getElementById('lndBtnLoc')!==undefined&&document.getElementById('lndLoaderLoc')!==undefined) {
-      document.getElementById('lndBtnLoc').style.display = "inline";
-      document.getElementById('lndLoaderLoc').style.display = "none";
-    }
-    else if (document.getElementById('mainBtnLoc')!==undefined&&document.getElementById('mainLoaderLoc')!==undefined) {
-      document.getElementById('mainBtnLoc').style.display = "inline";
-      document.getElementById('mainLoaderLoc').style.display = "none";
-    }
-
     if(typeof google == "undefined" || typeof google.maps == "undefined"){
       //
       if(this.connectivity.isOnline()){
@@ -373,6 +363,8 @@ export class GeolocationService {
 
   // Location Map
   getPolHosp(detail,page){
+    console.log(detail);
+    console.log(page);
 
     var img;
 

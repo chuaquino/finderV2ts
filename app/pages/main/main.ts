@@ -1,27 +1,21 @@
 import {Component} from '@angular/core';
 import {Storage, SqlStorage, NavParams, NavController,AlertController} from 'ionic-angular';
-// import {TabsPage} from '../jeepney/tabs/tabs';
-//
-//
+
+import {TabsPage} from '../jeepney/tabs/tabs';
+
 import {UniPage} from '../uni-page/uni-page';
 // // Import menu pages until here
-// import {DataService} from '../../services/data';
+import {DataService} from '../../providers/data-service/data-service';
 // // import {Geolocation} from 'ionic-native';
 //
 import {GoogleMapsService} from '../../providers/google-maps-service/google-maps-service';
 import {GeolocationService} from '../../providers/geolocation-service/geolocation-service';
 
 import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
-//
-//
-// import {TranslatePipe} from '../../pipes/translate';
+
 
 @Component({
   templateUrl: 'build/pages/main/main.html'
-  // // ,
-  // providers: [GeolocationService],
-  // pipes: [TranslatePipe]
-
 })
 
 export class MainPage{
@@ -31,11 +25,14 @@ export class MainPage{
 
   private geolocation2: any = "";
   private details: any;
+  private TabsPage:any = TabsPage;
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private alertCtrl: AlertController, private geolocationService: GeolocationService, private connectivity: ConnectivityService) {
+  constructor(private navCtrl: NavController, private navParams: NavParams, private alertCtrl: AlertController, private geolocationService: GeolocationService, private connectivity: ConnectivityService, private dataService: DataService) {
     this.details = this.navParams.get('geoloc');
     console.log(this.details);
     this.geolocation2 = this.details.locationName;
+
+    this.dataService.importDB();
   }
 
   // ionViewDidEnter(){

@@ -5,24 +5,16 @@ import {GeolocationService} from '../../providers/geolocation-service/geolocatio
 
 import {LoadingModal} from '../../components/loading-modal/loading-modal';
 // // Import menu pages
-// import {UniDetailPage} from '../uni-detail-page/uni-detail-page';
-//
-//
-import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
-//
-// import {TranslatePipe} from '../../pipes/translate';
-/*
-  Generated class for the RestaurantPage page.
+import {UniDetailPage} from '../uni-detail-page/uni-detail-page';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
+
 @Component({
   templateUrl: 'build/pages/uni-page/uni-page.html',
   directives: [LoadingModal],
    providers: [GeolocationService]
-  //  pipes: [TranslatePipe]
 })
+
 export class UniPage {
 
   @ViewChild(Content) content: Content;
@@ -46,6 +38,7 @@ export class UniPage {
   private cuisine: any;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private geolocationService: GeolocationService, private connectivity: ConnectivityService) {
+    
     this.details = navParams.get('geoloc');
     this.page = navParams.get('page');
 
@@ -298,7 +291,7 @@ export class UniPage {
 
 
         console.log(me.results);
-        // me.navCtrl.push(UniDetailPage, {item_select:me.results,page:me.page});
+        me.navCtrl.push(UniDetailPage, {item_select:me.results,page:me.page});
 
       });
     }

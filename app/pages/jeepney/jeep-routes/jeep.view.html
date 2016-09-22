@@ -1,54 +1,54 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-title>{{'Jeepneys'|translate}}</ion-title>
+    <ion-title>{{'Jeepneys'}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content >
   <div class="bg">
     <ion-item-group >
 
-      <ion-item-divider light>{{'Angeles'|translate}}</ion-item-divider>
+      <ion-item-divider light>{{'Angeles'}}</ion-item-divider>
       <button ion-item detail-none *ngFor="let acjeep of acjeeps" [navPush]="JeepDetailsPage" [navParams]=" {jeep: acjeep}">
         <ion-thumbnail item-left>
         <img src="{{acjeep.image}}">
         </ion-thumbnail>
-        <h2>{{acjeep.name|translate}}</h2>
-        <h3>{{acjeep.color|translate}}</h3>
+        <h2>{{acjeep.name}}</h2>
+        <h3>{{acjeep.color}}</h3>
       </button>
 
-      <ion-item-divider light>{{'Clark'|translate}}</ion-item-divider>
+      <ion-item-divider light>{{'Clark'}}</ion-item-divider>
       <button ion-item detail-none *ngFor="let cjeep of cjeeps" [navPush]="JeepDetailsPage" [navParams]=" {jeep: cjeep}">
         <ion-thumbnail item-left>
         <img src="{{cjeep.image}}">
         </ion-thumbnail>
-        <h2>{{cjeep.name|translate}}</h2>
-        <h3>{{cjeep.color|translate}}</h3>
+        <h2>{{cjeep.name}}</h2>
+        <h3>{{cjeep.color}}</h3>
       </button>
 
     </ion-item-group>
 
     <!-- <ion-list>
       <ion-list-header>
-        {{'Angeles'|translate}}
+        {{'Angeles'}}
       </ion-list-header>
       <ion-item detail-none *ngFor="let acjeep of acjeeps" [navPush]="[JeepDetailsPage, {jeep: acjeep}]">
         <ion-thumbnail item-left>
         <img src="{{acjeep.image}}">
         </ion-thumbnail>
-        <h2>{{acjeep.name|translate}}</h2>
-        <h3>{{acjeep.color|translate}}</h3>
+        <h2>{{acjeep.name}}</h2>
+        <h3>{{acjeep.color}}</h3>
       </ion-item>
     </ion-list>
     <ion-list>
       <ion-list-header>
-        {{'Angeles'|translate}}
+        {{'Angeles'}}
       </ion-list-header>
       <ion-item detail-none *ngFor="let cjeep of cjeeps" [navPush]="[JeepDetailsPage, {jeep: cjeep}]">
         <ion-thumbnail item-left>
         <img src="{{cjeep.image}}">
         </ion-thumbnail>
-        <h2>{{cjeep.name|translate}}</h2>
-        <h3>{{cjeep.color|translate}}</h3>
+        <h2>{{cjeep.name}}</h2>
+        <h3>{{cjeep.color}}</h3>
       </ion-item>
     </ion-list> -->
   </div>

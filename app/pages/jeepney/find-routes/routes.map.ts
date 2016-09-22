@@ -1,15 +1,17 @@
 import {Component} from '@angular/core';
 import {NavParams} from 'ionic-angular';
 // import {GoogleMapsService} from '../../../providers/google-maps-service/google-maps-service';
-import {DataService} from '../../../services/data';
-// import {LoadingModal} from '../../../components/loading-modal/loading-modal';
+import {DataService} from '../../../providers/data-service/data-service';
+import {LoadingModal} from '../../../components/loading-modal/loading-modal';
+
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 
 
 @Component({
-  templateUrl: 'build/pages/jeepney/find-routes/routes.map.html'
-  // ,
-  // directives: [LoadingModal]
+  templateUrl: 'build/pages/jeepney/find-routes/routes.map.html',
+  directives: [LoadingModal],
+  pipes: [TranslatePipe]
   // ,
   // providers: [GoogleMapsService]
 })

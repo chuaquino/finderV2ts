@@ -3,12 +3,15 @@ import {NavParams, NavController, AlertController} from 'ionic-angular';
 
 import {GeolocationService} from '../../providers/geolocation-service/geolocation-service';
 
+import {TranslatePipe} from "ng2-translate/ng2-translate";
+
 import {MainPage} from '../main/main';
 
 
 
 @Component({
-  templateUrl: 'build/pages/landingpage/landingpage.html'
+  templateUrl: 'build/pages/landingpage/landingpage.html',
+  pipes: [TranslatePipe]
 })
 export class LandingPage {
 
@@ -44,7 +47,7 @@ export class LandingPage {
 
     console.log("geolocation working");
 
-    var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
+    var options = {maximumAge: 0, timeout: 5000, enableHighAccuracy:true};
 
     console.log(this.geolocation);
     console.log(this.navCtrl);
@@ -66,6 +69,8 @@ export class LandingPage {
              geoCoords.locationName = locName;
 
              if (locName!==undefined) {
+               document.getElementById('lndBtnLoc').style.display = "inline";
+               document.getElementById('lndLoaderLoc').style.display = "none";
                console.log(me.navCtrl);
                console.log(geoCoords);
                setTimeout(function() {
