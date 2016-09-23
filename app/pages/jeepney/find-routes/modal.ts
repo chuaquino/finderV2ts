@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
 import {ModalController, NavController, ViewController,NavParams} from 'ionic-angular';
 import {DataService} from '../../../providers/data-service/data-service';
-
-import {TranslatePipe, TranslateService,} from "ng2-translate/ng2-translate";
+import {TranslatePipe, TranslateService} from "ng2-translate/ng2-translate";
 
 @Component({
   templateUrl: 'build/pages/jeepney/find-routes/modal.html',
