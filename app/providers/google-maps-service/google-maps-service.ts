@@ -2,18 +2,14 @@ import {NavController, AlertController, ToastController} from 'ionic-angular';
 import {Injectable} from '@angular/core';
 import {Http, URLSearchParams} from '@angular/http';
 import 'rxjs/Rx';
-import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
-
 import {Geolocation} from 'ionic-native';
+import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
+import {TranslateService} from "ng2-translate/ng2-translate";
+
+
 
 declare var google;
 
-// import {LoadingModal} from '../../components/loading-modal/loading-modal';
-//
-// @Component({
-//   templateUrl: 'build/pages/maps/maps.html',
-//   directives: [LoadingModal],
-// })
 
 @Injectable()
 export class GoogleMapsService {
@@ -76,7 +72,7 @@ export class GoogleMapsService {
 
 
 
-  constructor( private alertCtrl: AlertController, private toastCtrl: ToastController, private navCtrl: NavController, private connectivity: ConnectivityService, private http: Http) {
+  constructor( private alertCtrl: AlertController, private toastCtrl: ToastController, private navCtrl: NavController, private connectivity: ConnectivityService, private http: Http, private translate: TranslateService) {
     this.map = null;
     this.mapInitialised = false;
     this.apiKey = 'AIzaSyD4zGo9cejtd83MbUFQL8YU71b8_A5XZpc';
@@ -364,51 +360,6 @@ export class GoogleMapsService {
             colorCodeDiv.style.maxWidth='100%';
             colorCodeDiv.style.width='100%';
 
-            var trans =[{
-              "Angeles City Hall": "アンヘレスシティホール",
-              "Angeles Medical Center Inc.": "Angeles Medical Center Inc.",
-              "Angeles University Foundation": "アンヘレスユニバーシティファウンデーション",
-              "Angeles University Foundation Medical Center": "AUF メディカルセンター",
-              "Anunas": "アヌナス",
-              "Bancal": "バンカル",
-              "Carmenville": "Carmenville",
-              "Citi Center": "シティセンター",
-              "City College of Angeles": "アンヘレスシティ大学",
-              "Cuayan": "Cuayan",
-              "Diamond Subdivision": "ダイアモンドサブディビジョン",
-              "Dr. Amando L. Garcia Medical Center, Inc.": "Dr. Amando L. Garcia Medical Center, Inc.",
-              "Fields Avenue": "フィールズアベニュー",
-              "Friendship": "フレンドシップ",
-              "Friendship Plaza": "フレンドシッププラザ",
-              "Holy Angel University": "ホリーエンジェル大学",
-              "Holy Family Medical Center": "ホリーファミリーメディカルセンター",
-              "Holy Rosary Parish Church": "Holy Rosary Parish Church",
-              "Immaculate Concepcion Parish": "イマキュレートコンセプションパリッシュ",
-              "Jenra Mall": "Jenra Mall",
-              "Lourdes North West": "ルーデスノースウェスト",
-              "Main Gate Terminal": "メインゲートターミナル",
-              "Margot": "マーゴット",
-              "Marisol": "マリソル",
-              "Marquee Mall": "マーキーモール",
-              "Nepo Mall": "Nepo Mall",
-              "Rafael Lazatin Memorial Medical Center": "ラファエルラサティンメモリアルメディカルセンター",
-              "Republic Central Colleges": "リパブリックセントラルコレッジズ",
-              "SM City Clark" : "SMシティクラーク",
-              "Sacred Heart Medical Center": "サクレッドハートメディカルセンター",
-              "Sapang Bato": "サパンベイトー",
-              "Saver\'s Mall": "Saver\'s Mall",
-              "Systems Plus College Foundation": "システムズプラスカレッジファウンデーション",
-              "The Medical City Angeles": "ザメディカルシティ - アンヘレス",
-              "Timog Park Gate 1": "チモグパークゲート1",
-              "Timog Park Gate 2": "チモグパークゲート 2",
-              "Timog Park Gate 3": "チモグパークゲート 3",
-              "Transfer": "トランスファ",
-              "Villa Sol": "Villa Sol",
-
-              "Legend:": "凡例：",
-              "Legends:": "凡例："
-            }];
-
             if (me.latlng2 !==undefined || me.ctr1==='1ride') {
               var divRow1 = document.createElement('div');
               divRow1.className='row';
@@ -432,21 +383,15 @@ export class GoogleMapsService {
               // // });
 
               if (from) {
-                if (navigator.language.split('-')[0]=='ja') {
-                  index.from = trans[0][from];
-                }
-                else {
-                  index.from = from;
-                }
+                this.translate.get(from).subscribe((res: string) => {
+                    index.from  = res;
+                });
 
               }
               if (to) {
-                if (navigator.language.split('-')[0]=='ja') {
-                  index.to = trans[0][to];
-                }
-                else {
-                  index.to = to;
-                }
+                this.translate.get(to).subscribe((res: string) => {
+                    index.to  = res;
+                });
               }
 
               divCol1.innerHTML = index.from+" - "+index.to;
@@ -483,7 +428,11 @@ export class GoogleMapsService {
 
             if (colorHead) {
               if (navigator.language.split('-')[0]=='ja') {
-                divCol2.innerHTML = trans[0][colorHead];
+                // divCol2.innerHTML = trans[0][colorHead];
+                this.translate.get(colorHead).subscribe((res: string) => {
+                  divCol2.innerHTML = res;
+                });
+
               }
               else {
                 divCol2.innerHTML = colorHead;
@@ -963,23 +912,12 @@ export class GoogleMapsService {
     canvas.style.backgroundColor=color;
     divCol.appendChild(canvas);
 
-    var transJeep =[{
-      "CHECK-POINT-HOLY": "チェック-ポイント- ホーリーハイー",
-      "CHECK-POINT-HOLY-HI-WAY": "チェック-ポイント- ホーリーハイー-ウェイ",
-      "CHECK-POINT-HENSONVILLE-HOLY":"チェック-ポイント-ヘンソンヴィル-ホーリー",
-      "PANDAN-PAMPANG":"パンダン-パンパング",
-      "MAINGATE-FRIENDSHIP":"メインゲート-フレンドシップ",
-      "MARISOL-PAMPANG":"マリソル-パンパング",
-      "PAMPANG-HOLY":"パンパング-ホーリー",
-      "PLARIDEL-CAPAYA":"プラリデル-カパヤ",
-      "SUNSET-NEPO":"スンセト-ネポ",
-      "VILLA-PAMPANG":"ビラ-パンパング",
-      "SAPANG BATO-ANGELES":"サパングバトバト-アンヘレス",
-      "Walk through":"通り抜ける"
-    }];
 
     var text = document.createElement('span');
-    text.innerHTML = ' '+transJeep[0][jname];
+
+    this.translate.get(jname).subscribe((res: string) => {
+      text.innerHTML = ' '+res
+    });
     divCol.appendChild(text);
 
   }
