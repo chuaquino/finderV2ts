@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-title>{{'Jeepneys'}}</ion-title>
+    <ion-title>{{'Jeepneys' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content >
   <div class="bg">
     <ion-item-group >
 
-      <ion-item-divider light>{{'Angeles'}}</ion-item-divider>
+      <ion-item-divider light>{{'Angeles' | translate}}</ion-item-divider>
       <button ion-item detail-none *ngFor="let acjeep of acjeeps" [navPush]="JeepDetailsPage" [navParams]=" {jeep: acjeep}">
         <ion-thumbnail item-left>
         <img src="{{acjeep.image}}">
@@ -16,7 +16,7 @@
         <h3>{{acjeep.color}}</h3>
       </button>
 
-      <ion-item-divider light>{{'Clark'}}</ion-item-divider>
+      <ion-item-divider light>{{'Clark' | translate}}</ion-item-divider>
       <button ion-item detail-none *ngFor="let cjeep of cjeeps" [navPush]="JeepDetailsPage" [navParams]=" {jeep: cjeep}">
         <ion-thumbnail item-left>
         <img src="{{cjeep.image}}">

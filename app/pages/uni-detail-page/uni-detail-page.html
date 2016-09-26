@@ -43,20 +43,20 @@
           <button clear  [navPush]="UniMapPage" [navParams]="{item_coordinates:item_select,page:page}" class="unidetail_btn">
             <ion-icon name="marker"></ion-icon>
           </button>
-          <span style="font-size:9pt; color: #B7B7B7;">{{'Map' }}</span>
+          <span style="font-size:9pt; color: #B7B7B7;">{{'Map' | translate}}</span>
         </ion-col>
 
         <ion-col width-25 style="text-align:center;">
           <button clear (click)="launchWebsite(item_select.website)" class="unidetail_btn">
             <ion-icon name="website"></ion-icon>
           </button>
-          <span style="font-size:9pt; color: #B7B7B7;">{{'Website' }}</span>
+          <span style="font-size:9pt; color: #B7B7B7;">{{'Website' | translate}}</span>
         </ion-col>
       </ion-row>
     </ion-grid>
     <ion-list class="list_reviews">
       <ion-list-header class="list_review_header">
-        {{'Reviews'}}
+        {{'Reviews' | translate}}
       </ion-list-header>
       <ion-item *ngFor="let review of reviews" class="review_item_list">
         <ion-row>

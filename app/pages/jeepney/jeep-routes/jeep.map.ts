@@ -5,13 +5,15 @@ import {ConnectivityService} from '../../../providers/connectivity-service/conne
 import {GoogleMapsService} from '../../../providers/google-maps-service/google-maps-service';
 import {LoadingModal} from '../../../components/loading-modal/loading-modal';
 import {Http, URLSearchParams} from '@angular/http';
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 import 'rxjs/Rx';
 
 @Component({
   templateUrl: 'build/pages/jeepney/jeep-routes/jeep.map.html'
   ,
   directives: [LoadingModal],
-  providers: [GoogleMapsService]
+  providers: [GoogleMapsService],
+  pipes: [TranslatePipe]
 })
 
 export class JeepMapsPage {
@@ -19,7 +21,7 @@ export class JeepMapsPage {
   private jeep: any;
   private option: any;
   private points: any;
-  
+
   constructor(private dataService: DataService, private navParams: NavParams, private navCtrl: NavController, private http: Http, private connectivity: ConnectivityService, private googleMapsService: GoogleMapsService){
 
     this.jeep= this.navParams.get('jeep');
