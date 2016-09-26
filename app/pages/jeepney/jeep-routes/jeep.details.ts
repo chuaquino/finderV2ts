@@ -2,9 +2,11 @@ import {Component} from '@angular/core';
 import {NavParams, NavController} from 'ionic-angular';
 import {JeepMapsPage} from '../../jeepney/jeep-routes/jeep.map';
 import {DataService} from '../../../providers/data-service/data-service';
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({
-  templateUrl: 'build/pages/jeepney/jeep-routes/jeep.details.html'
+  templateUrl: 'build/pages/jeepney/jeep-routes/jeep.details.html',
+  pipes: [TranslatePipe]
 })
 
 export class JeepDetailsPage {

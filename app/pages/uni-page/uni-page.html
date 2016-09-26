@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar primary>
-      <ion-title>{{title_header}}</ion-title>
+      <ion-title>{{title_header |translate}}</ion-title>
   </ion-navbar>
 
   <ion-toolbar class="sort_toolbar">
       <ion-grid>
         <ion-row *ngIf="page=='resto'">
           <ion-col width-33 class="ToolbarCol">
-            <span class="sort_label">{{'Place Type'}}</span>
+            <span class="sort_label">{{'Place Type' |translate}}</span>
             <ion-item class="slct">
-                <ion-label class="input_lbl">{{'Place Type'}}</ion-label>
+                <ion-label class="input_lbl">{{'Place Type' |translate}}</ion-label>
                 <ion-select id ='1'  (ionChange)="updatePlaceType($event)" class="drpdown" okText="OK" cancelText="{{'Cancel'}}">
                   <ion-option *ngFor="let pl_item of pl_type_items" value="{{pl_item.value}}" selected="{{pl_item.checked}}">{{pl_item.text}} </ion-option>
                 </ion-select>
@@ -17,9 +17,9 @@
           </ion-col>
 
           <ion-col width-33 class="ToolbarCol">
-            <span class="sort_label">{{'Cuisine'}}</span>
+            <span class="sort_label">{{'Cuisine' |translate}}</span>
             <ion-item class="slct">
-              <ion-label id ='2' class="input_lbl">{{'Cuisine'}}</ion-label>
+              <ion-label id ='2' class="input_lbl">{{'Cuisine' |translate}}</ion-label>
               <ion-select id="cuisine" [disabled]='disable ? true : null' (ionChange)="updateCuisine($event)" class="drpdown" okText="OK" cancelText="{{'Cancel'}}">
                 <ion-option *ngFor="let cui_item of cui_items" value="{{cui_item.value}}" selected="{{cui_item.checked}}">{{cui_item.text}} </ion-option>
               </ion-select>
@@ -27,9 +27,9 @@
           </ion-col>
 
           <ion-col class="ToolbarCol" width-33 >
-            <span class="sort_label">{{'Sort'}}</span>
+            <span class="sort_label">{{'Sort' |translate}}</span>
             <ion-item class="slct sort">
-              <ion-label class="input_lbl">{{'Sort'}}</ion-label>
+              <ion-label class="input_lbl">{{'Sort' |translate}}</ion-label>
               <ion-select (ionChange)="updateSort($event)" class="drpdown" okText="OK" cancelText="{{'Cancel'}}">
                 <ion-option *ngFor="let sort_item of sort_items" value="{{sort_item.value}}" selected="{{sort_item.checked}}">{{sort_item.text}} </ion-option>
               </ion-select>
@@ -39,18 +39,18 @@
 
         <ion-row *ngIf="page!='resto'">
           <ion-col width-50 class="ToolbarCol">
-            <span class="sort_label">{{'Place Type'}}</span>
+            <span class="sort_label">{{'Place Type' |translate}}</span>
             <ion-item class="slct">
-                <ion-label class="input_lbl">{{'Place Type'}}</ion-label>
+                <ion-label class="input_lbl">{{'Place Type' |translate}}</ion-label>
                 <ion-select id ='1' (ionChange)="updatePlaceType($event)" class="drpdown_nc" okText="OK" cancelText="{{'Cancel'}}">
                   <ion-option *ngFor="let pl_item of pl_type_items" value="{{pl_item.value}}" selected="{{pl_item.checked}}">{{pl_item.text}} </ion-option>
                 </ion-select>
             </ion-item>
           </ion-col>
           <ion-col width-50 class="ToolbarCol">
-            <span class="sort_label">{{'Sort'}}</span>
+            <span class="sort_label">{{'Sort' |translate}}</span>
             <ion-item class="slct sort">
-              <ion-label class="input_lbl">{{'Sort'}}</ion-label>
+              <ion-label class="input_lbl">{{'Sort' |translate}}</ion-label>
               <ion-select [(ngModel)]="sort" (ionChange)="updateSort($event)" class="drpdown_nc" okText="OK" cancelText="{{'Cancel'}}">
                 <ion-option  *ngFor="let sort_item of sort_items" value="{{sort_item.value}}">{{sort_item.text}} </ion-option>
               </ion-select>

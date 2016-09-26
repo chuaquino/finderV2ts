@@ -8,11 +8,13 @@ import {LoadingModal} from '../../components/loading-modal/loading-modal';
 import {UniDetailPage} from '../uni-detail-page/uni-detail-page';
 
 import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({
   templateUrl: 'build/pages/uni-page/uni-page.html',
   directives: [LoadingModal],
-   providers: [GeolocationService]
+   providers: [GeolocationService],
+   pipes: [TranslatePipe]
 })
 
 export class UniPage {
@@ -38,7 +40,7 @@ export class UniPage {
   private cuisine: any;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private geolocationService: GeolocationService, private connectivity: ConnectivityService) {
-    
+
     this.details = navParams.get('geoloc');
     this.page = navParams.get('page');
 

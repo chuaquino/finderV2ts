@@ -2,10 +2,12 @@ import {Component} from '@angular/core';
 import {NavParams} from 'ionic-angular';
 import {Geolocation} from 'ionic-native';
 import {GeolocationService} from '../../providers/geolocation-service/geolocation-service';
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({
   templateUrl: 'build/pages/uni-map-page/uni-map-page.html',
-  providers: [GeolocationService]
+  providers: [GeolocationService],
+  pipes: [TranslatePipe]
 })
 export class UniMapPage {
 
