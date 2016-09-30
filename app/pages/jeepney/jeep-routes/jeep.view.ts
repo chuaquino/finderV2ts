@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {Storage, SqlStorage} from 'ionic-angular';
 import {DataService} from '../../../providers/data-service/data-service';
 import {JeepDetailsPage} from '../../jeepney/jeep-routes/jeep.details';
-// import {TranslatePipe} from '../../../pipes/translate';
 import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({

@@ -10,8 +10,7 @@ import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({
   templateUrl: 'build/pages/jeepney/jeep-routes/jeep.map.html',
-  pipes: [TranslatePipe]
-  ,
+  pipes: [TranslatePipe],
   directives: [LoadingModal],
   providers: [GoogleMapsService]
 })

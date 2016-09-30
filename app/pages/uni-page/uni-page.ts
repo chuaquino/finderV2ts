@@ -13,8 +13,8 @@ import {TranslatePipe} from "ng2-translate/ng2-translate";
 @Component({
   templateUrl: 'build/pages/uni-page/uni-page.html',
   directives: [LoadingModal],
-   providers: [GeolocationService],
-   pipes: [TranslatePipe]
+  providers: [GeolocationService],
+  pipes: [TranslatePipe]
 })
 
 export class UniPage {

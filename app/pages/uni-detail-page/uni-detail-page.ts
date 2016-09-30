@@ -2,9 +2,11 @@ import {Component} from '@angular/core';
 import {NavController, NavParams, AlertController} from 'ionic-angular';
 import {Geolocation,InAppBrowser} from 'ionic-native';
 import {GeolocationService} from '../../providers/geolocation-service/geolocation-service';
-import {TranslatePipe} from "ng2-translate/ng2-translate";
+
 
 import {UniMapPage} from '../uni-map-page/uni-map-page';
+
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 @Component({
   templateUrl: 'build/pages/uni-detail-page/uni-detail-page.html',
