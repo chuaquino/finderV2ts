@@ -12,10 +12,12 @@ import {GoogleMapsService} from '../../providers/google-maps-service/google-maps
 import {GeolocationService} from '../../providers/geolocation-service/geolocation-service';
 
 import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
+import {TranslatePipe} from "ng2-translate/ng2-translate";
 
 
 @Component({
-  templateUrl: 'build/pages/main/main.html'
+  templateUrl: 'build/pages/main/main.html',
+  pipes: [TranslatePipe]
 })
 
 export class MainPage{

@@ -2,7 +2,7 @@ import {NavController,AlertController, ToastController} from 'ionic-angular';
 import {Injectable, Inject} from '@angular/core';
 import {Http} from '@angular/http';
 import {ConnectivityService} from '../../providers/connectivity-service/connectivity-service';
-// import {MainPage} from '../../pages/main/main';
+import {TranslateService} from "ng2-translate/ng2-translate";
 
 
 import {Geolocation} from 'ionic-native';
@@ -18,36 +18,15 @@ export class GeolocationService {
   latlng: any = {};
   // mainPage:any  = MainPage;
 
-  constructor( private alertCtrl: AlertController, private toastCtrl: ToastController, private connectivity: ConnectivityService) {
+  constructor( private alertCtrl: AlertController, private toastCtrl: ToastController, private connectivity: ConnectivityService, private translate: TranslateService) {
 
   }
-  // static get parameters(){
-  //   return [[ConnectivityService],[NavController],[AlertController],[ToastController]];
-  // }
-  // constructor(connectivityService,nav,alert,toastCtrl) {
-  //   this.connectivity = connectivityService;
-  //   this.mapInitialised = false;
-  //   this.apiKey = 'AIzaSyD4zGo9cejtd83MbUFQL8YU71b8_A5XZpc';
-  //   // this.loadGeolocation();
-  //   this.toastCtrl = toastCtrl;
-  //   this.latlng = {};
-  //   this.nav = nav;
-  //   this.alert = alert;
-  //   this.MainPage  = MainPage;
-  //
-  //   this.map = null;
-  //
-  //   // this.getPlaces();
-  //
-  // }
-  //
+
   loadGeolocation(){
     console.log("loadGeolocation(){");
-    // this.connectivity.isOnline();
-  //
-  //
+
     this.addConnectivityListeners();
-  //
+
     if(typeof google == "undefined" || typeof google.maps == "undefined"){
 
         console.log("Google maps JavaScript needs to be loaded.");
@@ -260,14 +239,23 @@ export class GeolocationService {
       //   this.netErrMsg();
       // }
       // }, 2000);
-      let toast = this.toastCtrl.create({
-        message: 'Looks like there is a problem with your network connection. Try again later.',
-        duration: 5000,
-        position: 'bottom'
+
+      // this.translate.get(data.res.rows.item(i).text).subscribe((res: string) => {
+      //     this.points.push(res);
+      // });
+
+      this.translate.get('Looks like there is a problem with your network connection. Try again later.').subscribe((res: string) => {
+        let toast = this.toastCtrl.create({
+          message: res,
+          duration: 5000,
+          position: 'bottom'
+        });
+        toast.present();
+
       });
-      toast.present();
 
     };
+
 
     document.addEventListener('online', onOnline, false);
     document.addEventListener('offline', onOffline, false);

@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-title>{{'Jeepneys'}}</ion-title>
+    <ion-title>{{'Jeepneys' |translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content class="bg">
       <div  padding *ngFor="let jeepDetail of jeepDetails">
           <ion-img src="{{jeepDetail.image}}"></ion-img>
-        <h2>{{jeepDetail.name}}</h2>
-        <h3>{{jeepDetail.color}}</h3>
-        <h4>{{'Route Description:'}}<br/>{{jeepDetail.route}}</h4>
-        <h6><br/>{{jeepDetail.route2}}</h6>
+        <h2>{{jeepDetail.name |translate}}</h2>
+        <h3>{{jeepDetail.color |translate}}</h3>
+        <h4>{{'Route Description:' |translate}}<br/>{{jeepDetail.route}}</h4>
+        <h6><br/>{{jeepDetail.route2 |translate}}</h6>
         <button full  (click)="presentModal()">View Map</button>
       </div>
 </ion-content>
