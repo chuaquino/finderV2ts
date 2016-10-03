@@ -24,6 +24,35 @@
     <!-- jeeps and resto -->
     <ion-row center class="opt_row">
       <ion-col width-50 class="main-col">
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-left [navPush]="TabsPage">
+              <ion-icon name="jeep"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Jeeps & Routes' | translate}}
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col width-50 class="main-col">
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-right (click)="nextPage('resto')">
+              <ion-icon name="resto"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+          {{'Restaurants' | translate}}
+        </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- <ion-col width-50 class="main-col">
         <button ion-button class="main_btn" clear large block [navPush]="TabsPage">
           <ion-icon name="jeep"></ion-icon>
         </button>
@@ -35,24 +64,40 @@
           <ion-icon name="resto"></ion-icon>
         </button>
         <span class="btn-menu-label">{{'Restaurants' | translate }}</span>
-      </ion-col>
+      </ion-col> -->
     </ion-row>
     <!-- jeeps and resto -->
 
     <!-- hotels and malls -->
     <ion-row center class="opt_row">
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block (click)="nextPage('hotels')">
-          <ion-icon name="hotel"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Hotels' |translate}}</span>
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-left (click)="nextPage('hotels')">
+              <ion-icon name="hotel"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Hotels' |translate}}
+          </ion-col>
+        </ion-row>
       </ion-col>
 
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block  (click)="nextPage('malls')">
-          <ion-icon name="mall"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Malls' |translate}}</span>
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-right (click)="nextPage('malls')">
+              <ion-icon name="mall"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Malls' |translate}}
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
     <!-- hotels and malls -->
@@ -60,17 +105,31 @@
     <!-- supermarkets and barbers -->
     <ion-row center class="opt_row">
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block (click)="nextPage('supermarkets')">
-          <ion-icon name="supermarket"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Supermarkets' |translate}}</span>
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-left (click)="nextPage('supermarkets')">
+              <ion-icon name="supermarket"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Supermarkets' |translate}}
+          </ion-col>
+        </ion-row>
       </ion-col>
 
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block  (click)="nextPage('salons')">
-          <ion-icon name="salon"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Beauty Salons' | translate}}</span>
+        <ion-row>
+          <button class="main_btn" fab clear fab-top fab-right  (click)="nextPage('salons')">
+            <ion-icon name="salon"></ion-icon>
+          </button>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Beauty Salons' | translate}}
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
     <!-- supermarkets and barbers -->
@@ -78,17 +137,33 @@
     <!-- police and hospitals -->
     <ion-row center class="opt_row">
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block (click)="nextPage('police')">
-          <ion-icon name="police"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Police Stations' |translate}}</span>
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-left (click)="nextPage('police')">
+              <ion-icon name="police"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+           {{'Police Stations' |translate}}
+         </ion-col>
+        </ion-row>
       </ion-col>
 
       <ion-col width-50 class="main-col">
-        <button ion-button class="main_btn" clear large block  (click)="nextPage('hospitals')">
-          <ion-icon name="health"></ion-icon>
-        </button>
-        <span class="btn-menu-label">{{'Hospitals' |translate}}</span>
+        <ion-row>
+          <ion-col>
+            <button class="main_btn" fab clear fab-top fab-right (click)="nextPage('hospitals')">
+              <ion-icon name="health"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="btn-menu-label">
+          <ion-col>
+            {{'Hospitals' |translate}}
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
     <!-- police and hospitals -->
